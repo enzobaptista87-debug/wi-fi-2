@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta
+    name="theme-color"
+    content="#07111f"
+>
+
+<meta
+    name="description"
+    content="Conecte-se ao Wi-Fi OFICIAL CLIENTES"
+>
+
+<title>Wi-Fi | OFICIAL CLIENTES</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4f7fb;
+    color: #102033;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro Text",
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+    font-family: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 10%,
+            rgba(28,126,255,.20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(0,126,255,.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #07111f,
+            #0c1b2d 55%,
+            #07111f
+        );
+
+    color: white;
+    padding:
+        58px
+        20px
+        72px;
+
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+
+    top: -330px;
+    left: -150px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50%;
+
+    right: -160px;
+    bottom: -300px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 850px;
+    margin: auto;
+}
+
+.wifi-symbol {
+    font-size: 64px;
+    line-height: 1;
+    margin-bottom: 20px;
+
+    filter:
+        drop-shadow(
+            0 8px 25px rgba(20,130,255,.35)
+        );
+}
+
+.hero h1 {
+    font-size: clamp(34px, 7vw, 64px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #2388ff;
+}
+
+.hero-subtitle {
+    margin: 18px auto 0;
+
+    max-width: 650px;
+
+    color: #c8d5e5;
+
+    font-size: clamp(15px, 3vw, 20px);
+    line-height: 1.5;
+}
+
+.hero-line {
+    width: 80px;
+    height: 3px;
+
+    margin: 28px auto 0;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        90deg,
+        #1681ff,
+        #52a5ff
+    );
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.main {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: -32px auto 0;
+
+    padding:
+        0
+        18px
+        50px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =====================================================
+   DEVICE CARDS
+===================================================== */
+
+.devices {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.device-card {
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 26px;
+
+    border: 1px solid #dfe7f1;
+
+    box-shadow:
+        0 18px 45px rgba(18,42,68,.08);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.device-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 24px 55px rgba(18,42,68,.12);
+}
+
+
+/* =====================================================
+   DEVICE HEADER
+===================================================== */
+
+.device-icon {
+    width: 74px;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #091725;
+
+    color: white;
+
+    font-size: 36px;
+
+    margin-bottom: 22px;
+}
+
+.android-card .device-icon {
+    background: linear-gradient(
+        145deg,
+        #12a65a,
+        #087b40
+    );
+}
+
+.other-card .device-icon {
+    background: #152334;
+}
+
+.device-card h2 {
+    font-size: 28px;
+    letter-spacing: -.7px;
+}
+
+.device-card > p {
+    margin-top: 9px;
+
+    color: #667589;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.steps {
+    margin-top: 24px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    background: #f4f7fb;
+
+    border-radius: 15px;
+
+    padding: 12px;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+}
+
+.step-number {
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #197cf5;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   QR AREA
+===================================================== */
+
+.qr-box {
+    margin-top: 24px;
+
+    background: #f8fbff;
+
+    border: 1px solid #dce8f5;
+
+    border-radius: 20px;
+
+    padding: 18px;
+
+    text-align: center;
+}
+
+.qr-box canvas {
+    display: block;
+
+    width: min(100%, 230px) !important;
+    height: auto !important;
+
+    margin: auto;
+
+    border-radius: 12px;
+
+    background: white;
+
+    padding: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(20,45,75,.08);
+}
+
+.qr-title {
+    margin-top: 14px;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.qr-subtitle {
+    margin-top: 4px;
+
+    font-size: 12px;
+
+    color: #728197;
+}
+
+
+/* =====================================================
+   NETWORK BOX
+===================================================== */
+
+.network-box {
+    margin-top: 18px;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f1f6fc,
+            #f8fbff
+        );
+
+    border: 1px solid #e0e9f3;
+}
+
+.network-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin-bottom: 16px;
+}
+
+.network-item:last-child {
+    margin-bottom: 0;
+}
+
+.network-icon {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    box-shadow:
+        0 3px 10px rgba(20,40,70,.06);
+
+    flex-shrink: 0;
+}
+
+.network-label {
+    font-size: 11px;
+
+    color: #718096;
+
+    margin-bottom: 3px;
+}
+
+.network-value {
+    font-size: 16px;
+
+    font-weight: 800;
+
+    color: #102033;
+
+    word-break: break-word;
+}
+
+
+/* =====================================================
+   COPY BUTTON
+===================================================== */
+
+.copy-button {
+    width: 100%;
+
+    border: 0;
+
+    background: white;
+
+    color: #162438;
+
+    border: 1px solid #dbe5ef;
+
+    border-radius: 12px;
+
+    padding: 12px;
+
+    margin-top: 17px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .15s ease;
+}
+
+.copy-button:hover {
+    background: #f1f6fb;
+}
+
+.copy-button:active {
+    transform: scale(.98);
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.primary-button {
+    width: 100%;
+
+    border: 0;
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    margin-top: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0879ff,
+            #1d91ff
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(14,117,255,.22);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 14px 30px rgba(14,117,255,.28);
+}
+
+
+/* =====================================================
+   TIP
+===================================================== */
+
+.tip {
+    margin-top: 18px;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background: #eef8f2;
+
+    color: #286044;
+
+    font-size: 13px;
+
+    line-height: 1.45;
+}
+
+.tip strong {
+    color: #174d32;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 0 18px 35px;
+}
+
+.footer-inner {
+    background:
+        linear-gradient(
+            135deg,
+            #07111f,
+            #0e2035
+        );
+
+    color: white;
+
+    border-radius: 24px;
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+.footer-icon {
+    font-size: 42px;
+
+    flex-shrink: 0;
+}
+
+.footer h3 {
+    font-size: 21px;
+}
+
+.footer p {
+    color: #b8c8da;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status {
+    text-align: center;
+
+    margin: 0 auto 18px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+.status strong {
+    color: #172b42;
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+.toast {
+    position: fixed;
+
+    left: 50%;
+    bottom: 24px;
+
+    transform:
+        translate(-50%, 20px);
+
+    background: #0c1928;
+
+    color: white;
+
+    padding: 13px 18px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.25);
+}
+
+.toast.show {
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .devices {
+        grid-template-columns: 1fr;
+    }
+
+    .device-card {
+        padding: 23px;
+    }
+
+    .hero {
+        padding-top: 45px;
+        padding-bottom: 58px;
+    }
+
+    .main {
+        margin-top: -25px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        letter-spacing: -1.2px;
+    }
+
+    .device-card {
+        border-radius: 20px;
+    }
+
+    .footer-inner {
+        padding: 22px;
+    }
+
+    .footer-icon {
+        font-size: 34px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="wifi-symbol">
+            📶
+        </div>
+
+        <h1>
+            Conecte-se ao <span>Wi-Fi</span>
+        </h1>
+
+        <p class="hero-subtitle">
+            Detectamos o seu dispositivo e mostramos
+            a melhor forma de conexão.
+        </p>
+
+        <div class="hero-line"></div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CONTEÚDO PRINCIPAL
+===================================================== -->
+
+<main class="main">
+
+    <div class="status">
+        Sistema detectado:
+        <strong id="deviceDetected">
+            identificando...
+        </strong>
+    </div>
+
+
+    <section class="devices">
+
+
+        <!-- =================================================
+             IPHONE
+        ================================================== -->
+
+        <article
+            id="iphoneCard"
+            class="device-card iphone-card hidden"
+        >
+
+            <div class="device-icon">
+                
+            </div>
+
+            <h2>
+                iPhone
+            </h2>
+
+            <p>
+                Conecte-se em poucos passos
+                pelos Ajustes.
+            </p>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div>
+                        Abra os
+                        <strong>Ajustes</strong>
+                        do seu iPhone.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div>
+                        Toque em
+                        <strong>Wi-Fi</strong>.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <div>
+                        Selecione a rede
+                        <strong>OFICIAL CLIENTES</strong>.
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        4
+                    </div>
+
+                    <div>
+                        Digite a senha
+                        indicada abaixo.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="network-box">
+
+                <div class="network-item">
+
+                    <div class="network-icon">
+                        📶
+                    </div>
+
+                    <div>
+
+                        <div class="network-label">
+                            Nome da rede
+                        </div>
+
+                        <div class="network-value">
+                            OFICIAL CLIENTES
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="network-item">
+
+                    <div class="network-icon">
+                        🔒
+                    </div>
+
+                    <div>
+
+                        <div class="network-label">
+                            Senha
+                        </div>
+
+                        <div
+                            class="network-value"
+                            id="iphonePassword"
+                        >
+                            #OFICIAL#0
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="copy-button"
+                    onclick="copiarSenha()"
+                >
+                    📋 &nbsp; Copiar senha
+                </button>
+
+            </div>
+
+
+            <button
+                class="primary-button"
+                onclick="mostrarQRCode('iphoneQR')"
+            >
+                ▦ &nbsp; Mostrar QR Code
+            </button>
+
+
+            <div
+                id="iphoneQR"
+                class="qr-box hidden"
+            >
+
+                <div id="iphoneCanvas"></div>
+
+                <div class="qr-title">
+                    Escaneie com a câmera
+                </div>
+
+                <div class="qr-subtitle">
+                    O QR Code contém os dados
+                    da rede Wi-Fi.
+                </div>
+
+            </div>
+
+
+            <div class="tip">
+
+                💡 <strong>Dica:</strong>
+                Se preferir, você também pode
+                copiar a senha e conectar manualmente.
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ANDROID
+        ================================================== -->
+
+        <article
+            id="androidCard"
+            class="device-card android-card hidden"
+        >
+
+            <div class="device-icon">
+                🤖
+            </div>
+
+            <h2>
+                Android
+            </h2>
+
+            <p>
+                Escaneie o QR Code para
+                conectar rapidamente.
+            </p>
+
+
+            <div class="qr-box">
+
+                <div id="androidCanvas"></div>
+
+                <div class="qr-title">
+                    Escaneie o QR Code
+                </div>
+
+                <div class="qr-subtitle">
+                    Aponte a câmera para o código
+                    para configurar o Wi-Fi.
+                </div>
+
+            </div>
+
+
+            <div class="network-box">
+
+                <div class="network-item">
+
+                    <div class="network-icon">
+                        📶
+                    </div>
+
+                    <div>
+
+                        <div class="network-label">
+                            Nome da rede
+                        </div>
+
+                        <div class="network-value">
+                            OFICIAL CLIENTES
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="network-item">
+
+                    <div class="network-icon">
+                        🔒
+                    </div>
+
+                    <div>
+
+                        <div class="network-label">
+                            Senha
+                        </div>
+
+                        <div class="network-value">
+                            #OFICIAL#0
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="copy-button"
+                    onclick="copiarSenha()"
+                >
+                    📋 &nbsp; Copiar senha
+                </button>
+
+            </div>
+
+
+            <div class="tip">
+
+                💡 <strong>Dica:</strong>
+                Em aparelhos compatíveis,
+                o Android oferecerá a opção
+                de entrar na rede após a leitura.
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             OUTROS DISPOSITIVOS
+        ================================================== -->
+
+        <article
+            id="otherCard"
+            class="device-card other-card hidden"
+        >
+
+            <div class="device-icon">
+                📱
+            </div>
+
+            <h2>
+                Outros dispositivos
+            </h2>
+
+            <p>
+                Use o QR Code ou os dados
+                abaixo para se conectar.
+            </p>
+
+
+            <div class="qr-box">
+
+                <div id="otherCanvas"></div>
+
+                <div class="qr-title">
+                    Escaneie o QR Code
+                </div>
+
+                <div class="qr-subtitle">
+                    Compatível com smartphones,
+                    tablets e outros dispositivos.
+                </div>
+
+            </div>
+
+
+            <div class="network-box">
+
+                <div class="network-item">
+
+                    <div class="network-icon">
+                        📶
+                    </div>
+
+                    <div>
+
+                        <div class="network-label">
+                            Nome da rede
+                        </div>
+
+                        <div class="network-value">
+                            OFICIAL CLIENTES
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="network-item">
+
+                    <div class="network-icon">
+                        🔒
+                    </div>
+
+                    <div>
+
+                        <div class="network-label">
+                            Senha
+                        </div>
+
+                        <div class="network-value">
+                            #OFICIAL#0
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="copy-button"
+                    onclick="copiarSenha()"
+                >
+                    📋 &nbsp; Copiar senha
+                </button>
+
+            </div>
+
+
+            <div class="tip">
+
+                ℹ️ O QR Code funciona na maioria
+                dos smartphones e tablets que
+                possuem leitor de QR Code.
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-icon">
+            📶
+        </div>
+
+        <div>
+
+            <h3>
+                Sua conexão, mais simples.
+            </h3>
+
+            <p>
+                Aproxime seu celular da tag NFC
+                ou escaneie o QR Code.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    id="toast"
+    class="toast"
+>
+    Senha copiada!
+</div>
+
+
+
+<!-- =====================================================
+     QR CODE
+     
+     A biblioteca é carregada no navegador.
+     O conteúdo do QR é gerado localmente.
+===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+
+<script>
+
+/* =====================================================
+   CONFIGURAÇÃO DA REDE
+===================================================== */
+
+const WIFI_SSID = "OFICIAL CLIENTES";
+
+const WIFI_PASSWORD = "#OFICIAL#0";
+
+const WIFI_SECURITY = "WPA";
+
+
+/* =====================================================
+   FORMATO WI-FI QR
+===================================================== */
+
+const wifiQR =
+    "WIFI:" +
+    "T:" + WIFI_SECURITY +
+    ";" +
+    "S:" + WIFI_SSID +
+    ";" +
+    "P:" + WIFI_PASSWORD +
+    ";;";
+
+
+/* =====================================================
+   GERAR QR CODES
+===================================================== */
+
+function gerarQRCode(elementId) {
+
+    const element =
+        document.getElementById(elementId);
+
+    if (!element) return;
+
+    element.innerHTML = "";
+
+    new QRCode(element, {
+
+        text: wifiQR,
+
+        width: 230,
+
+        height: 230,
+
+        colorDark: "#111827",
+
+        colorLight: "#ffffff",
+
+        correctLevel:
+            QRCode.CorrectLevel.M
+
+    });
+}
+
+
+/* =====================================================
+   GERAR TODOS OS QR CODES
+===================================================== */
+
+function gerarTodosQR() {
+
+    gerarQRCode("androidCanvas");
+
+    gerarQRCode("otherCanvas");
+
+    gerarQRCode("iphoneCanvas");
+
+}
+
+
+/* =====================================================
+   DETECÇÃO DO DISPOSITIVO
+===================================================== */
+
+function detectarDispositivo() {
+
+    const ua =
+        navigator.userAgent ||
+        navigator.vendor ||
+        window.opera ||
+        "";
+
+
+    /*
+       Android
+    */
+
+    const isAndroid =
+        /Android/i.test(ua);
+
+
+    /*
+       iPhone / iPad / iPod
+
+       A segunda verificação cobre
+       versões mais recentes do iPad
+       que podem se apresentar como Mac.
+    */
+
+    const isIOS =
+        /iPhone|iPad|iPod/i.test(ua) ||
+        (
+            navigator.platform === "MacIntel" &&
+            navigator.maxTouchPoints > 1
+        );
+
+
+    const iphoneCard =
+        document.getElementById("iphoneCard");
+
+    const androidCard =
+        document.getElementById("androidCard");
+
+    const otherCard =
+        document.getElementById("otherCard");
+
+    const detected =
+        document.getElementById("deviceDetected");
+
+
+    /*
+       Android
+    */
+
+    if (isAndroid) {
+
+        androidCard.classList.remove("hidden");
+
+        detected.textContent =
+            "Android";
+
+        return;
+
+    }
+
+
+    /*
+       iPhone / iPad
+    */
+
+    if (isIOS) {
+
+        iphoneCard.classList.remove("hidden");
+
+        detected.textContent =
+            "iPhone / iPad";
+
+        return;
+
+    }
+
+
+    /*
+       Outros
+    */
+
+    otherCard.classList.remove("hidden");
+
+    detected.textContent =
+        "Outro dispositivo";
+
+}
+
+
+/* =====================================================
+   MOSTRAR QR CODE DO IPHONE
+===================================================== */
+
+function mostrarQRCode(id) {
+
+    const box =
+        document.getElementById(id);
+
+    if (!box) return;
+
+    box.classList.toggle("hidden");
+
+    if (!box.classList.contains("hidden")) {
+
+        box.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }
+
+}
+
+
+/* =====================================================
+   COPIAR SENHA
+===================================================== */
+
+async function copiarSenha() {
+
+    try {
+
+        await navigator.clipboard.writeText(
+            WIFI_PASSWORD
+        );
+
+        mostrarToast(
+            "Senha copiada!"
+        );
+
+    } catch (error) {
+
+        /*
+           Fallback para navegadores
+           que não permitem clipboard.
+        */
+
+        const textarea =
+            document.createElement("textarea");
+
+        textarea.value =
+            WIFI_PASSWORD;
+
+        textarea.style.position =
+            "fixed";
+
+        textarea.style.opacity =
+            "0";
+
+        document.body.appendChild(
+            textarea
+        );
+
+        textarea.select();
+
+        try {
+
+            document.execCommand(
+                "copy"
+            );
+
+            mostrarToast(
+                "Senha copiada!"
+            );
+
+        } catch (e) {
+
+            mostrarToast(
+                "Senha: " + WIFI_PASSWORD
+            );
+
+        }
+
+        document.body.removeChild(
+            textarea
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   TOAST
+===================================================== */
+
+function mostrarToast(texto) {
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent =
+        texto;
+
+    toast.classList.add(
+        "show"
+    );
+
+    setTimeout(() => {
+
+        toast.classList.remove(
+            "show"
+        );
+
+    }, 2200);
+
+}
+
+
+/* =====================================================
+   INICIALIZAÇÃO
+===================================================== */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        detectarDispositivo();
+
+        /*
+           Pequeno atraso para garantir
+           que a biblioteca QR foi carregada.
+        */
+
+        setTimeout(
+            gerarTodosQR,
+            300
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
